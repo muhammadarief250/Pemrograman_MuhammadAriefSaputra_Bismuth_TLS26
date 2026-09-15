@@ -12,12 +12,20 @@ int main() {
     int N, K;
     cout << "Masukkan N (jumlah astronot): ";
     cin >> N;
+    while (N < 1) {
+        cout << "N harus lebih besar atau sama dengan 1. Silakan masukkan ulang N: ";
+        cin >> N;
+    }
+    if (N == 1) {
+        cout << "The Last Astronaut: 1" << endl;
+        return 0;
+    }
+
     cout << "Masukkan K (jarak hitungan awal): ";
     cin >> K;
-
-    if (N < 1) {
-        cout << "N harus lebih besar atau sama dengan 1. Permainan tidak bisa dimulai." << endl;
-        return 0;
+    while (K < 1) {
+        cout << "K harus lebih besar dari 0. Silakan masukkan ulang K: ";
+        cin >> K;
     }
 
     int list_astronot[1000];
